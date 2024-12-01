@@ -1,0 +1,303 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    
+}
+
+/* Login Page css */
+.main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container-login{
+    display: flex;
+    align-items: center;
+    height: 480px;
+    width: 853px !important;
+    border:px solid black;
+    box-shadow: 2px 2px 8px rgb(43, 41, 41);
+    padding: 0 !important;
+}
+.main .forms {
+    /* border: 1px solid black; */
+    padding: 25px;
+    margin: 10px 6px 10px 6px;
+    height: 388px;
+    width: 266px;
+}
+
+.forms .title{
+    text-align: center;
+}
+
+.container-login .forms{
+    width: 45%;
+}
+.container-login .img-section{
+    height: 100%;
+    width: 55%;
+    box-shadow: -8px 0px 6px -6px black;
+
+}
+.container-login .img-section img{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+.main .input{
+    display: flex;
+
+}
+.login-btn{
+    margin-top: 30px;
+    text-align: center;
+}
+.register{
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+/* Register Page css */
+.box{
+    width: 900px !important;
+    margin:20px 0px 20px 0px;
+    box-shadow: 1px 1px 8px 1px black,-1px -1px 8px 1px black;
+    height:1000px;
+    padding:35px !important;
+}
+.box h2{
+    text-align: center;
+    /* margin-bottom: 30px; */
+}
+.box p{
+    text-align: center;
+}  
+
+.box p .vertical {
+    border-left: 0.2px solid black;
+    height: 30px;
+    position: absolute;
+    left: 65%;
+  }
+.box .loc-btn{
+    height: 35px;
+    width: 98px;
+    font-size: 10px;
+    margin-left: 30px;
+    padding:0 15px;
+}
+.box .signup-btn{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.box .signup-btn button{
+    height: 45px;
+    width: 100px;
+
+}
+/* Driver details */
+.driver-box{
+    width: 900px !important;
+    margin:20px 0px 20px 0px;
+    box-shadow: 1px 1px 8px 1px black,-1px -1px 8px 1px black;
+    height:830px;
+    padding:35px !important;
+}
+.driver-box h2{
+    text-align: center;
+}
+.driver-box .driver-head {
+    margin-top: 10px;
+
+}
+.driver-box .driver-btn{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.driver-box .driver-btn button{
+    height: 45px;
+    width: 100px;
+
+}
+
+
+/* Landing page */
+.line{
+    margin-top: 90px;
+    /* margin-bottom: 200px; */
+    border: 1px solid black;
+    height: 8px;
+    width: 100%;
+    background-color: black;
+    /* overflow: hidden; */
+}
+.car{
+        margin: 50px 0 -72px 0;
+}
+.car-image{
+    position: relative;
+    margin-bottom: -30px;
+    height: 50px;
+    width: 100px;
+    animation: car-move 2.5s linear forwards infinite;
+}
+
+@keyframes car-move {
+    0%{
+        left: -200px;
+    }
+    100%{
+        left: 40%;
+    }
+}
+.container .card{
+    margin-top: 3rem;
+    border: 0px solid black !important;
+}
+
+.banner{
+    background-color: #212529;
+    color: white;
+}
+.banner ,.req-ride{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    height: 32rem;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+}
+.req-ride{
+    margin-top: 2rem;
+    
+}
+.banner-img img{
+    height: 250px;
+    width: 500px;
+    border-radius:69px 55px 48px 64px;
+}
+.banner .banner-img{
+    margin: auto 0 auto 40px;
+    padding: 20px 10px;
+}
+.banner .banner-content{
+    margin: auto 35px auto 10px;
+    padding: 30px 10px;
+}
+.req-ride .req-ride-img{
+    width: 40%;
+    margin: auto;
+}
+.req-ride .req-ride-content{
+    width: 60%;
+    margin: auto 50px;
+
+}
+.req-ride-img img{
+    height: 200px;
+    width: 400px;
+}
+
+/* Publish Ride page */
+/* .publish-ride-body{
+    background-color: rgb(34, 32, 32);
+    color: white;
+} */
+ /* *body{
+    background-color: black;
+ }
+.ride{
+    background-color: black;
+} */
+.ride h2{
+    /* margin-top: 2rem; */
+    text-align: center;
+}
+.publish-ride{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.ride-img img{
+    height: 200px;
+    width: 400px;
+}
+.ride-details{
+    border: 2px solid rgb(138, 133, 133);
+    height: 24rem;
+    width: 26rem;
+    border-radius: 5px 5px 13px 13px;
+}
+.ride-details-form{
+    padding: 25px 25px;
+}
+.publish-ride-btn{
+    margin-top: 40px;
+}
+.publish-ride-btn button{
+    width: 100%;
+    height: 50px;
+    border-radius: 0 0 10px 10px;
+}
+
+.publish-ride-content{
+    margin-top: 7rem;
+}
+
+
+/* Footer Section */
+.footer{
+    height: 20rem;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    background-color: #EDEDED;
+}
+.about-content{
+    margin:3rem auto 3rem 9rem;
+}
+.about-content h3{
+    /* margin-left: 20px; */
+    margin: 0 0 3rem 1.7rem;
+}
+.about-content ul{
+    list-style-type: none;
+}
+.about-content  li{
+    margin: 30px 0 0px 0;
+}
+.about-content  li a{
+    text-decoration: none;
+    color: #212529;
+}
+.social-media{
+    margin:5rem auto 3rem auto;
+    display: flex;
+}
+.social-media a{
+    text-decoration: none;
+    color: #212529 ;
+    margin-left: 4rem;
+    font-size: 2.6rem;
+}
+.copyright{
+    display: flex;
+    color: #212529;
+    justify-content: space-between;
+}
+.copyright-para{
+    margin-left: 9rem;
+}
+.copyright-right{
+    margin-right: 9rem;
+}
