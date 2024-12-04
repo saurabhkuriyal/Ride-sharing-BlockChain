@@ -32,8 +32,8 @@ export default function Landingpage() {
   return (
     <>
       <Navbars />
-      <Container fluid>
-        <Carousel style={{ height: "500px" }}>
+      <Container fluid style={{ marginBottom: "6rem" }}>
+        <Carousel style={{ height: "500px", margin: "0px" }}>
           <Carousel.Item style={{ height: "500px" }}>
             <img src={img1} className="d-block w-100 " />
             <Carousel.Caption>
@@ -61,7 +61,7 @@ export default function Landingpage() {
 
         <Form
           style={{
-            marginTop: "520px",
+            marginTop: "516px",
             position: "absolute",
             top: "20px",
             left: "50px",
@@ -106,7 +106,7 @@ export default function Landingpage() {
         <Row>
           <Col>
             <Card style={{ width: "18rem", height: "12rem" }} cl>
-              <FaCoins />
+              {/* <FaCoins style={{ height: "20px", width: "30px" }} /> */}
               <Card.Body>
                 <Card.Title>Your pick of rides at low prices</Card.Title>
                 <Card.Text>
@@ -133,7 +133,7 @@ export default function Landingpage() {
           </Col>
           <Col>
             <Card style={{ width: "18rem", height: "12rem" }} cl>
-              <Card.Img variant="top" src="holder.js/100px180" />
+              {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
               <Card.Body>
                 <Card.Title>Scroll, click, tap and go!</Card.Title>
                 <Card.Text>
@@ -147,7 +147,7 @@ export default function Landingpage() {
         </Row>
       </Container>
 
-      <div className="banner">
+      <div className="banner ">
         <div className="banner-img">
           <img src={scamimg3} alt="" />
         </div>
