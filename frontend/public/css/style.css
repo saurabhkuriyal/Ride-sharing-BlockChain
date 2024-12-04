@@ -301,3 +301,13 @@ body{
 .copyright-right{
     margin-right: 9rem;
 }
+
+/* Search box */
+.suggestion-item {
+    transition: all 0.2s ease;
+  }
+  .suggestion-item:hover {
+    background-color: #f8f9fa;
+    padding-left: 16px;
+    cursor: pointer;
+  }
