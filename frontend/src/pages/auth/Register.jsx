@@ -115,6 +115,8 @@ const SignupForm = () => {
             state: { userId: res.data.userId },
           });
         }
+
+        navigate("/login")
       })
       .catch((err) => {
         console.log(err);

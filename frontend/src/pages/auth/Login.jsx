@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import "../../../public/css/style.css";
 import { userlogin } from "../../features/handelSlice/tokenSlice";
 import img from "/assets/images/cars-driving.gif";
@@ -10,6 +11,7 @@ import img from "/assets/images/cars-driving.gif";
 function Login() {
 
   const dispatch=useDispatch();
+  const navigate=useNavigate();
 
   let [loginCredentials, setLoginCredentials] = useState({
     username: "",
@@ -30,10 +32,15 @@ function Login() {
       
       const response=await axios.post("http://localhost:3000/auth/user",loginCredentials);
 
-      dispatch(userlogin(response.data.token))
+      const currToken=response.data.token
+      console.log(currToken);
+      dispatch(userlogin(currToken))
       if(response.data.success){
         alert("Login successful")
       }
+
+      
+      navigate("/");
 
     } catch (error) {
       console.log(error);

@@ -5,13 +5,13 @@ const initialState={
 }
 
 export const tokenSlice=createSlice({
-    name:"auth",
+    name:'auth',
     initialState,
     reducers:{
-        userlogin:(state,token)=>{
+        userlogin:(state,action)=>{
             state.token=action.payload;
         },
-        userlogout:(state,token)=>{
+        userlogout:(state,action)=>{
             state.token=null;
         }
     }

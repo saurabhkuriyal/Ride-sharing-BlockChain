@@ -1,5 +1,6 @@
 // import Dashboard from "./pages/user/Dashboard";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProtectedRoute from "./components/common/ProtectedRoute";
 import Login from "./pages/auth/Login";
 import SignupForm from "./pages/auth/Register";
 import VechileRegister from "./pages/auth/VehicleRegister";
@@ -10,17 +11,22 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login></Login>}></Route>
-          <Route path="/home" element={<Landingpage/>}></Route>
-          <Route path="/register" element={<SignupForm></SignupForm>}></Route>
-          <Route
-            path="/register/vehicleRegistration"
-            element={<VechileRegister></VechileRegister>}
-          ></Route>
-          <Route
-            path="/publishride"
-            element={<PublishRide></PublishRide>}
-          ></Route>
+            <Route path="/login" element={<Login></Login>}></Route>
+            <Route path="/register" element={<SignupForm></SignupForm>}></Route>
+            <Route
+              path="/register/vehicleRegistration"
+              element={<VechileRegister></VechileRegister>}
+            ></Route>
+            <Route element={<ProtectedRoute/>}>
+            
+            <Route path="/" element={<Landingpage />}></Route>
+            
+            
+            <Route
+              path="/publishride"
+              element={<PublishRide></PublishRide>}
+            ></Route>
+            </Route>
         </Routes>
       </BrowserRouter>
     </>
