@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
+    background-color: white;
     
 }
 
@@ -64,7 +64,7 @@ body{
 /* Register Page css */
 .box{
     width: 900px !important;
-    margin:20px 0px 20px 0px;
+    margin:2rem auto;
     box-shadow: 1px 1px 8px 1px black,-1px -1px 8px 1px black;
     height:1000px;
     padding:35px !important;
@@ -167,7 +167,7 @@ body{
     color: white;
 }
 .banner ,.req-ride{
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-bottom: 2rem;
     height: 32rem;
     width: 100%;
@@ -204,54 +204,6 @@ body{
 .req-ride-img img{
     height: 200px;
     width: 400px;
-}
-
-/* Publish Ride page */
-/* .publish-ride-body{
-    background-color: rgb(34, 32, 32);
-    color: white;
-} */
- /* *body{
-    background-color: black;
- }
-.ride{
-    background-color: black;
-} */
-.ride h2{
-    /* margin-top: 2rem; */
-    text-align: center;
-}
-.publish-ride{
-    margin-top: 3rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
-.ride-img img{
-    height: 200px;
-    width: 400px;
-}
-.ride-details{
-    border: 2px solid rgb(138, 133, 133);
-    height: 24rem;
-    width: 26rem;
-    border-radius: 5px 5px 13px 13px;
-}
-.ride-details-form{
-    padding: 25px 25px;
-}
-.publish-ride-btn{
-    margin-top: 40px;
-}
-.publish-ride-btn button{
-    width: 100%;
-    height: 50px;
-    border-radius: 0 0 10px 10px;
-}
-
-.publish-ride-content{
-    margin-top: 7rem;
 }
 
 
@@ -300,4 +252,121 @@ body{
 }
 .copyright-right{
     margin-right: 9rem;
+}
+
+/* Search box */
+.suggestion-item {
+    transition: all 0.2s ease;
+  }
+  .suggestion-item:hover {
+    background-color: #f8f9fa;
+    padding-left: 16px;
+    cursor: pointer;
+  }
+
+
+  /* Publish Ride page */
+.publish-ride-body{
+    background-color: white;
+    /* color: white; */
+}
+.ride{
+    background-color: #EFEFEF;
+}
+.ride h1{
+    /* margin-top: 3rem; */
+    text-align: center;
+    /* font-size: 1.5rem; */
+    font-weight: 500;
+}
+.publish-ride{
+    align-items: center;
+     margin: 4rem 0 3rem 5px;
+     height: 480px;
+     width: 100%;
+     display: flex;
+     justify-content: space-evenly;
+
+}
+.ride-img img{
+    margin: 0 0 0 20px;
+    height: 200px;
+    width: 400px;
+}
+.ride-details{
+    border: 2px solid rgb(138, 133, 133);
+    height: 25rem;
+    width: 26rem;
+    border-radius: 5px 5px 13px 13px;
+    background-color: #EDEDED;
+}
+.ride-details-form{
+    padding: 25px 25px;
+}
+.publish-ride-btn{
+    margin-top: 40px;
+}
+.publish-ride-btn button{
+    width: 100%;
+    height: 67px;
+    border-radius: 0 0 10px 10px;
+}
+
+.publish-ride-content{
+    margin-top: 7rem;
+}
+.card-title h5{
+    margin: 0 0 0 15px;
+}
+
+  .achievments{
+    margin:-6rem auto 0 auto;
+    padding: 10px 0px;
+    background-color: #212529;
+    height: 150px;
+    width: 1050px;
+    border: 1px solid black;
+    color: white;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+  }
+  .achievments-content{
+    margin: 24px 0;
+    background-color: #212529;
+  }
+  .achievments-content p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+ .publishride-banner{
+     margin-top: -5.4rem;
+     margin-bottom: 3rem;
+     background-color: #A4E0E8;
+     height: 480px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+ }
+
+.pb-banner-img-section img{
+      margin: 9rem 0 0 20px;
+    height: 280px;
+  }
+  .carousel{
+    z-index: 1;
+    margin: 6rem 20px 0 20px;
+
+  }
+  .publishride-info{
+      background-color: #EDEDED;
+      height: 320px;
+      padding: 20px 25px;
+}
+    
+.publishride-footer{
+    margin-top: 2rem;
 }

@@ -6,7 +6,6 @@ const secret = "Blockchain";
 
 async function addUser(req, res) {
   try {
-
     const user = JSON.parse(req.body.userData);
     //console.log("This is body",user);
     //console.log("This is file",req.file);
@@ -14,7 +13,7 @@ async function addUser(req, res) {
       cloudinary.config({
         cloud_name: "deuofkrkf",
         api_key: "952718416357432",
-        api_secret: "mG88SEzbZ72mA3JRd8nMpR4bFzQ"
+        api_secret: "mG88SEzbZ72mA3JRd8nMpR4bFzQ",
       });
 
       const result = await cloudinary.uploader.upload(req.file.path);
@@ -30,23 +29,19 @@ async function addUser(req, res) {
 
     //console.log(newUser);
 
-    res.status(200).json({ success: true,userId:newUser._id });
-
+    res.status(200).json({ success: true, userId: newUser._id });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ success: false, msg: "Not registered" })
+    res.status(500).json({ success: false, msg: "Not registered" });
   }
 }
 
 async function verifyUser(req, res) {
-
   try {
-
     const { username, password } = req.body;
 
     const user = await User.findOne({ username: username });
     //console.log(user);
-
 
     if (user == null) {
       return res.status(400).json({ msg: "not found" });
@@ -55,33 +50,29 @@ async function verifyUser(req, res) {
     const ispasswd = bcrypt.compareSync(password, user.password);
 
     if (!ispasswd) {
-      return res.status(400).json({ msg: "wrong password" })
-
+      return res.status(400).json({ msg: "wrong password" });
     }
 
     //jwt token
-    const token = await jwt.sign({ userId: user._id, name: user.name }, secret, {
-      expiresIn: '1h',
+    const token = jwt.sign({ userId: user._id, name: user.name }, secret, {
+      expiresIn: "1h",
     });
 
     res.status(200).json({
       success: true,
       msg: "Welcome user",
       token: token,
-      username:user.username,
-      userType:user.userType,
-      userid:user._id
-    })
-
+      username: user.username,
+      userType: user.userType,
+      userid: user._id,
+    });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ success: false, error })
-
-
+    res.status(500).json({ success: false, error });
   }
 }
 
 module.exports = {
   addUser,
-  verifyUser
+  verifyUser,
 };
